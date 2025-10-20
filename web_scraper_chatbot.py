@@ -10,7 +10,7 @@ from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 
 # --- CONSTANTES DE CONFIGURACIÓN ---
-CHROMA_PATH = "chroma_db_web_descarga"
+CHROMA_PATH = "chroma_db_web"
 MODELO_OLLAMA = "phi3:mini"
 MODELO_EMBEDDING = "nomic-embed-text"
 
