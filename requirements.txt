@@ -6,3 +6,6 @@ pypdf
 tqdm
 chromadb
 langchain-ollama
+requests
+beautifulsoup4
+langchain-core
