@@ -5,9 +5,9 @@ import threading # <--- ¡NUEVO! Para ejecutar la carga en segundo plano
 from langchain_community.vectorstores import Chroma
 from langchain_community.llms import Ollama
 from langchain_ollama import OllamaEmbeddings
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema.runnable import RunnablePassthrough
-from langchain.schema.output_parser import StrOutputParser
+from langchain_core.prompts import PromptTemplate
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.output_parsers import StrOutputParser
 
 # --- CONSTANTES DE CONFIGURACIÓN ---
 CHROMA_PATH = "chroma_db_web"
@@ -47,7 +47,7 @@ def get_rag_chain():
 
         RESPUESTA DETALLADA Y COMPLETA:
         """
-        prompt = ChatPromptTemplate.from_template(template)
+        prompt = PromptTemplate.from_template(template)
         llm = Ollama(model=MODELO_OLLAMA)
 
         rag_chain = (
